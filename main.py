@@ -27,7 +27,7 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    await m.reply_text(f"😈**Hi bruh!**\n**🟢I'm Alive You can Use by /master**\n\n**<-URL Acceptable->**\n-`All Non-Drm+Drm Protected Url`\n-`Mpeg Dash Url`\n-`Vision IAS`\n-`PhysicsWallah`\n-`ClassPlus Url`\n-`Allen Institute`\n\n**Thanks for using me**\n\n**Developer -** `𝔹ℍ𝕌𝕄𝕀ℍ𝔸ℝ`")
+    await m.reply_text(f"😈**Hi bruh!**\n**🟢I'm Alive You can Use by /master**\n\n**<-URL Acceptable->**\n-<pre><code>`All Non-Drm+Drm Protected Url`\n-`Mpeg Dash Url`\n-`Vision IAS`\n-`PhysicsWallah`\n-`ClassPlus Url`\n-`Allen Institute`<pre><code>\n\n**Thanks for using me**\n\n**Developer -** `𝔹ℍ𝕌𝕄𝕀ℍ𝔸ℝ`")
 
 
 @bot.on_message(filters.command("stop"))
@@ -43,7 +43,7 @@ async def restart_handler(bot, m):
 @bot.on_message(filters.command(["master"]))
 async def account_login(bot: Client, m: Message):
     try:
-        editable = await m.reply_text('**Send 🗂️Master TXT🗂️ file for download**')
+        editable = await m.reply_text('**Send 🗂️Your TXT🗂️ file for download**')
         input: Message = await bot.listen(editable.chat.id)
         path = f"./downloads/{m.chat.id}"
         temp_dir = "./temp"
