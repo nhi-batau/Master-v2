@@ -1,37 +1,67 @@
 {
-    "name": "𝐓𝐞𝐱𝐭 Uploader 『ᎷΔŞŦᏋᏒ』BOT",
-    "description": "Download videos from various websites using this telegram bot",
-    "logo": "https://telegra.ph/file/32f106d692ff33700c464.jpg",
-    "keywords": [
-        "text-video",
-        "video-extract",
-        "pyrogram"
-    ],
-    "repository": "https://github.com/NtrRaz/TOPIC",
-    "success_url": "https://telegram.me/classtubeofficial",
-    "stack": "container",
-    "env": {
-        "API_ID": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 API ID",
-            "required": true
-        },
-        "API_HASH": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 API HASH",
-            "required": true
-        },
-        "BOT_TOKEN": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑩𝒐𝒕 𝑻𝒐𝒌𝒆𝒏",
-            "required": true
-        },
-        "VIP_USERS": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 Auth User ID",
-            "required": true
-        }
+  "name": "TXT UPLOADER",
+  "repository": "https://github.com/abhiguru143",
+  "description": "A telegram Bot for downloading videos from various websites. Created by MadXABhi",
+  "addons": [],
+  "env": {
+    "API_ID": {
+      "description": "TG API_ID",
+      "value": "",
+      "required": false
     },
-    "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ]
+    "API_HASH": {
+      "description": "TG API HASH",
+      "value": "",
+      "required": false
+    },
+    "BOT_TOKEN": {
+      "description": "Get your bot token by talking to @Botfather",
+      "required": false
+    },
+    "APP_NAME": {
+      "description": "Heroku app name",
+      "required": false
+    },
+    "API_KEY": {
+      "description": "Heroku api key",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "who will use this bot",
+      "value": "",
+      "required": false
+    },
+    "FR_TOKEN": {
+      "description": "FR_TOKEN",
+      "value": "f4f0e3047723385244d3aae0068d60ec09f79345",
+      "required": true
+    },
+    "credits": {
+      "description": "Give credit",
+      "value": "",
+      "required": false
+    },
+    "GROUP_IDS": {
+      "value": "",
+      "description": "Group Ids seperated by space",
+      "required": false
     }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "https://github.com/amivin/aria2-heroku.git"
+    }
+  ]
+}
