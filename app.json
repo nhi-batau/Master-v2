@@ -1,67 +1,29 @@
+
 {
-  "name": "TXT UPLOADER",
-  "repository": "https://github.com/abhiguru143",
-  "description": "A telegram Bot for downloading videos from various websites. Created by MadXABhi",
-  "addons": [],
-  "env": {
-    "API_ID": {
-      "description": "TG API_ID",
-      "value": "",
-      "required": false
-    },
-    "API_HASH": {
-      "description": "TG API HASH",
-      "value": "",
-      "required": false
-    },
-    "BOT_TOKEN": {
-      "description": "Get your bot token by talking to @Botfather",
-      "required": false
-    },
-    "APP_NAME": {
-      "description": "Heroku app name",
-      "required": false
-    },
-    "API_KEY": {
-      "description": "Heroku api key",
-      "required": false
-    },
-    "OWNER_ID": {
-      "description": "who will use this bot",
-      "value": "",
-      "required": false
-    },
-    "FR_TOKEN": {
-      "description": "FR_TOKEN",
-      "value": "f4f0e3047723385244d3aae0068d60ec09f79345",
-      "required": true
-    },
-    "credits": {
-      "description": "Give credit",
-      "value": "",
-      "required": false
-    },
-    "GROUP_IDS": {
-      "value": "",
-      "description": "Group Ids seperated by space",
-      "required": false
+    "name": "anonymous",
+    "description": "anonymous",
+    "repository": "https://github.com/",
+    "keywords": [
+        "telegram bot",
+        "pyrogram"
+    ],
+    "env": {
+        "API_ID":{
+            "description": "Get your telegram API ID from https://my.telegram.org",
+            "value":"20114039"
+        },
+        "API_HASH":{
+            "description":"Get your telegram API HASH from https://my.telegram.org",
+		    "value":"87297b8f3cc8fc9bbce591ad30da5896"
+        },
+        "BOT_TOKEN":{
+            "description":"Get from BotFather",
+            "value":"7559250442:AAF_HDC3Fb_yG6xHxXkRhhwlMm3LiwT9MkE"
+        },
+        "AUTH_USERS":{
+            "description":"Admin/Owner/Friends ID Seperate by ','  Ex: 44578878,8878899",
+            "value":"8172163893"
+        }
     }
-  },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "eco"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    },
-    {
-      "url": "https://github.com/amivin/aria2-heroku.git"
-    }
-  ]
+
 }
