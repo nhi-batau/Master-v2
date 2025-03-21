@@ -146,7 +146,7 @@ async def account_login(bot: Client, m: Message):
                 for url in urls:
                     print(url)
                     break
-            elif  in url:
+          
                     q = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).split("/")[0]
                     x = url.split("/")[5]
                     x = url.replace(x, "")
